@@ -1,3 +1,33 @@
+@import url(http://weloveiconfonts.com/api/?family=brandico|entypo|fontawesome|zocial);
+
+/* brandico */
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+  padding: 10px;
+  font-size: 28px;
+}
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+  padding: 10px;
+  font-size: 18px;
+}
+
 body,
 div,
 ul,
@@ -22,11 +52,12 @@ h6 {
 .work-entry,
 .project-entry {
   padding: 0 5%;
+  font-family: 'Oswald', sans-serif;
 }
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #56B37E;
   line-height: 48px;
   display: inline;
 }
@@ -100,20 +131,20 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #56B37E;
   display: none;
 }
 
-.orange {
-  background-color: #f5ae23;
+.green {
+  background-color: #56B37E;
+  color: white;
 }
 
-.orange-text {
-  color: #f5ae23;
+.green-text {
+  color: #56B37E;
 }
 
 .white-text {
-  font-weight: bold;
   color: #fff;
 }
 
@@ -161,6 +192,7 @@ ul {
   padding: 10px;
   width: 200px;
   display: none;
+  border-radius: 25px;
 }
 
 img {
@@ -168,7 +200,9 @@ img {
 }
 
 span {
-  padding: 5px;
+  padding: 10px;
+  color: white;
+
 }
 
 #lets-connect {

@@ -13,7 +13,7 @@ var bio = {
 		"github": "tomka88",
 		"location": "Berlin"
 	},
-	"greeting" : "Welcome to my site!",
+	"greeting" : "Dear visitor, welcome to my site! This project is part of my Front-End Web Developer Nanodegree Program on Udacity",
 	"skills" : ["front-end development", "product development", "rapid prototyping", "design thinking", "agile"],
 	"stack" : ["HTML5", "CSS", "JavaScrpit", "Sketch", "InVision", "Bootstrap", "JQuery", "Ajax"],
 	"biopic" : "images/tomka-profile.png"
@@ -51,14 +51,14 @@ var work = {
 			"description" : "Lucas ipsum dolor sit amet palpatine qui-gon baba windu hoth dooku skywalker kit bespin c-3po. Mustafar darth fett jade kessel. Binks maul anakin darth mothma antilles qui-gon jango wedge. Solo amidala qui-gon calrissian dooku sidious. Bothan calamari moff yavin amidala dooku boba. Darth leia solo kamino leia windu. Cade grievous fett leia. Mustafar solo ventress fett padmé moff. Vader palpatine obi-wan solo hutt qui-gon qui-gonn. Mustafar darth qui-gonn antilles qui-gonn darth moff jabba. Skywalker skywalker organa palpatine gonk lars owen."
 		},
 		{
-			"title" : "Strategy Intern",
+			"title" : "Strategy Intern – Internet Services Department",
 			"employer" : "Deutsche Telekom AG",
 			"location" : "Bonn",
 			"time" : "Jun. 2012 – Okt. 2012",
 			"description" : "Lucas ipsum dolor sit amet palpatine qui-gon baba windu hoth dooku skywalker kit bespin c-3po. Mustafar darth fett jade kessel. Binks maul anakin darth mothma antilles qui-gon jango wedge. Solo amidala qui-gon calrissian dooku sidious. Bothan calamari moff yavin amidala dooku boba. Darth leia solo kamino leia windu. Cade grievous fett leia. Mustafar solo ventress fett padmé moff. Vader palpatine obi-wan solo hutt qui-gon qui-gonn. Mustafar darth qui-gonn antilles qui-gonn darth moff jabba. Skywalker skywalker organa palpatine gonk lars owen."
 		},
 		{
-			"title" : "Strategy Intern",
+			"title" : "Business Development Intern",
 			"employer" : "Things I like GmbH – MONOQI",
 			"location" : "Berlin",
 			"time" : "Jan. 2012 – May 2012",
@@ -191,48 +191,31 @@ formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
 formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
 formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
 
-// function displayContacts() {
-// 	for (contact in bio.contacts) {
-// 		$("#topContacts").append(HTMLcontactGeneric);
-
-// 		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts[contact].mobile);
-// 		var formattedEmail = HTMLemail.replace("%data%", bio.contacts[contact].email);
-// 		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts[contact].github);
-
-// 		$("#topContacts").append(formattedMobile);
-// 		$("#topContacts").append(formattedEmail);
-// 		$("#topContacts").append(formattedGithub);
-// 	}
-// };
-
 for (i in formattedContactInfo) {
 	$("#topContacts").append(formattedContactInfo[i]);
 	$("#footerContacts").append(formattedContactInfo[i]);
 }
 
-//$("#header").append(formattedPic);
-//$("#topContacts").append(formattedPic);
-//var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
 
-function displayWork() {
-	for (company in work.companies) {
+function displayWork () {
+	for (company in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.companies[company].employer);
-		var formattedTitle = HTMLworkTitle.replace("%data%", work.companies[company].title);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[company].employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[company].title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 
 		$(".work-entry:last").append(formattedEmployerTitle);
 
-		var formattedTime = HTMLworkDates.replace("%data%", work.companies[company].time);
+		var formattedTime = HTMLworkDates.replace("%data%", work.jobs[company].time);
 		$(".work-entry:last").append(formattedTime);
 
-		var formattedPlace = HTMLworkLocation.replace("%data%", work.companies[company].place);
+		var formattedPlace = HTMLworkLocation.replace("%data%", work.jobs[company].location);
 		$(".work-entry:last").append(formattedPlace);
 
-		var formattedDescription = HTMLworkDescription.replace("%data%", work.companies[company].description);
+		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[company].description);
 		$(".work-entry:last").append(formattedDescription);
-	};
+	}
 };
 
 displayWork();
