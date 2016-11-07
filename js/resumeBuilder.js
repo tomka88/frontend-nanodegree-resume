@@ -112,25 +112,25 @@ var education = {
 			"url":"http://en.uni-bge.hu/"
 		}
 		],
-		"online courses" : [
-			{
-				"title": "Front-End Web Developer Nanodegree",
-				"school": "Udacity",
-				"dates": 2016,
-				"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001?v=fe1"
-			},
-			{
-				"title": "One Month Rails",
-				"school": "One Month",
-				"dates": 2015,
-				"url": "https://onemonth.com/"
-			},
-			{
-				"title": "One Month HTML & CSS",
-				"school": "One Month",
-				"dates": 2015,
-				"url": "https://onemonth.com/"
-			}
+	"onlineCourses" : [
+		{
+			"title": "Front-End Web Developer Nanodegree",
+			"school": "Udacity",
+			"dates": 2016,
+			"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001?v=fe1"
+		},
+		{
+			"title": "One Month Rails",
+			"school": "One Month",
+			"dates": 2015,
+			"url": "https://onemonth.com/"
+		},
+		{
+			"title": "One Month HTML & CSS",
+			"school": "One Month",
+			"dates": 2015,
+			"url": "https://onemonth.com/"
+		}
 	]
 };
 
@@ -283,6 +283,24 @@ function displayEducation () {
 		$(".education-entry:last").append(formattedSchoolMajor);
 
 	}
+
+	$("#education").append(HTMLonlineClasses);
+
+	for (online in education.onlineCourses) {
+		$("#education").append(HTMLonlineStart);
+
+		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[online].title);
+		$(".online-entry:last").append(formattedOnlineTitle);
+
+		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[online].school);
+		$(".online-entry:last").append(formattedOnlineSchool);
+
+		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[online].dates);
+		$(".online-entry:last").append(formattedOnlineDates);
+
+		// var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[online].url);
+		// $(".online-entry:last").append(formattedOnlineURL);
+	}	
 };
 
 displayEducation();
