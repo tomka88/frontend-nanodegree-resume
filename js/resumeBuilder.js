@@ -130,6 +130,24 @@ var education = {
 			"school": "One Month",
 			"dates": 2015,
 			"url": "https://onemonth.com/"
+		},
+		{
+			"title": "HTML & CSS",
+			"school": "Codecademy",
+			"dates": 2015,
+			"url": "https://www.codecademy.com/"
+		},
+		{
+			"title": "JavaScrpit",
+			"school": "Codecademy",
+			"dates": 2015,
+			"url": "https://www.codecademy.com/"
+		},
+		{
+			"title": "Ruby",
+			"school": "Codecademy",
+			"dates": 2014,
+			"url": "https://www.codecademy.com/"
 		}
 	]
 };
@@ -148,14 +166,14 @@ var projects = {
 			"dates" : "Okt. 2016",
 			"description" : "personal page hosted on GitHub",
 			"images" : ["http://lorempixel.com/400/200/cats", "http://lorempixel.com/400/200/cats"]
-		},
-
-		{	
-			"title" : "Datapalm blog",
-			"dates" : "Nov. 2016",
-			"description" : "A blog about storytelling with data",
-			"images" : ["http://lorempixel.com/400/200/fashion", "http://lorempixel.com/400/200/fashion"]
 		}
+		
+		// {	
+		// 	"title" : "Datapalm blog",
+		// 	"dates" : "Nov. 2016",
+		// 	"description" : "A blog about storytelling with data",
+		// 	"images" : ["http://lorempixel.com/400/200/fashion", "http://lorempixel.com/400/200/fashion"]
+		// }
 
 	]
 };
@@ -227,17 +245,17 @@ $(document).click(function(loc) {
 	logClicks(x, y);
 });
 
-function inName(name) {
-	name = name.trim().split(" ");
-	consol.log(name);
-	var firstName = name[0].slice(0,1).toUpperCase + name[0].slice(1).toLowerCase();
-	var lastName = name[1].toUpperCase;
-	var fullName = firstName + " " + lastName;
+// function inName(name) {
+// 	name = name.trim().split(" ");
+// 	consol.log(name);
+// 	var firstName = name[0].slice(0,1).toUpperCase + name[0].slice(1).toLowerCase();
+// 	var lastName = name[1].toUpperCase;
+// 	var fullName = firstName + " " + lastName;
 
-	return fullName;
-}
+// 	return fullName;
+// }
 
-$("#main").append(internationalizeButton);
+// $("#main").append(internationalizeButton);
 
 projects.display = function () {
 	for (item in projects.projects) {
