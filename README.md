@@ -1,3 +1,12 @@
+#######
+
+This is my Online Resume Project for Udacity's Front-End Web developer Nanodegree. I've used jQuery, JavaScript, HTML5 and CSS to complete this project.
+
+Please find below the project description.
+
+#######
+
+
 # Project Details
 ## How do I complete this project?
 Review the Online Resume [Project Rubric](https://review.udacity.com/?_ga=1.189245867.12280332.1465333852#!/projects/2962818615/rubric).
