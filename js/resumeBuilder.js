@@ -12,7 +12,7 @@ var bio = {
         "github": "tomka88",
         "location": "Berlin"
     },
-    "greeting": "Dear visitor, welcome to my site! This project is part of my Front-End Web Developer Nanodegree Program on Udacity",
+    "welcomeMessage": "Dear visitor, welcome to my site! This project is part of my Front-End Web Developer Nanodegree Program on Udacity",
     "skills": ["front-end development", "product development", "rapid prototyping", "design thinking", "agile"],
     "stack": ["HTML5", "CSS", "JavaScrpit", "Sketch", "InVision", "Bootstrap", "JQuery", "Ajax"],
     "biopic": "images/tomka-profile.png"
@@ -24,37 +24,37 @@ var work = {
         "title": "Product Manager",
         "employer": "Advertile Mobile GmbH",
         "location": "Berlin",
-        "time": "Okt. 2015 - Present",
+        "dates": "Okt. 2015 - Present",
         "description": "Lucas ipsum dolor sit amet palpatine qui-gon baba windu hoth dooku skywalker kit bespin c-3po. Mustafar darth fett jade kessel. Binks maul anakin darth mothma antilles qui-gon jango wedge. Solo amidala qui-gon calrissian dooku sidious. Bothan calamari moff yavin amidala dooku boba. Darth leia solo kamino leia windu. Cade grievous fett leia. Mustafar solo ventress fett padmé moff. Vader palpatine obi-wan solo hutt qui-gon qui-gonn. Mustafar darth qui-gonn antilles qui-gonn darth moff jabba. Skywalker skywalker organa palpatine gonk lars owen."
     }, {
         "title": "Product Owner",
         "employer": "Die Gestalten Verlag GmbH & Co. KG",
         "location": "Berlin",
-        "time": "Jan. 2014 – Sept. 2015",
+        "dates": "Jan. 2014 – Sept. 2015",
         "description": "Lucas ipsum dolor sit amet palpatine qui-gon baba windu hoth dooku skywalker kit bespin c-3po. Mustafar darth fett jade kessel. Binks maul anakin darth mothma antilles qui-gon jango wedge. Solo amidala qui-gon calrissian dooku sidious. Bothan calamari moff yavin amidala dooku boba. Darth leia solo kamino leia windu. Cade grievous fett leia. Mustafar solo ventress fett padmé moff. Vader palpatine obi-wan solo hutt qui-gon qui-gonn. Mustafar darth qui-gonn antilles qui-gonn darth moff jabba. Skywalker skywalker organa palpatine gonk lars owen."
     }, {
         "title": "Working Student",
         "employer": "Telekom Innovation Laboratories",
         "location": "Berlin",
-        "time": "Apr. 2013 – Aug. 2013",
+        "dates": "Apr. 2013 – Aug. 2013",
         "description": "Lucas ipsum dolor sit amet palpatine qui-gon baba windu hoth dooku skywalker kit bespin c-3po. Mustafar darth fett jade kessel. Binks maul anakin darth mothma antilles qui-gon jango wedge. Solo amidala qui-gon calrissian dooku sidious. Bothan calamari moff yavin amidala dooku boba. Darth leia solo kamino leia windu. Cade grievous fett leia. Mustafar solo ventress fett padmé moff. Vader palpatine obi-wan solo hutt qui-gon qui-gonn. Mustafar darth qui-gonn antilles qui-gonn darth moff jabba. Skywalker skywalker organa palpatine gonk lars owen."
     }, {
         "title": "Business Development Intern",
         "employer": "Seven Principles AG",
         "location": "Köln",
-        "time": "Okt. 2012 – Feb. 2013",
+        "dates": "Okt. 2012 – Feb. 2013",
         "description": "Lucas ipsum dolor sit amet palpatine qui-gon baba windu hoth dooku skywalker kit bespin c-3po. Mustafar darth fett jade kessel. Binks maul anakin darth mothma antilles qui-gon jango wedge. Solo amidala qui-gon calrissian dooku sidious. Bothan calamari moff yavin amidala dooku boba. Darth leia solo kamino leia windu. Cade grievous fett leia. Mustafar solo ventress fett padmé moff. Vader palpatine obi-wan solo hutt qui-gon qui-gonn. Mustafar darth qui-gonn antilles qui-gonn darth moff jabba. Skywalker skywalker organa palpatine gonk lars owen."
     }, {
         "title": "Strategy Intern – Internet Services Department",
         "employer": "Deutsche Telekom AG",
         "location": "Bonn",
-        "time": "Jun. 2012 – Okt. 2012",
+        "dates": "Jun. 2012 – Okt. 2012",
         "description": "Lucas ipsum dolor sit amet palpatine qui-gon baba windu hoth dooku skywalker kit bespin c-3po. Mustafar darth fett jade kessel. Binks maul anakin darth mothma antilles qui-gon jango wedge. Solo amidala qui-gon calrissian dooku sidious. Bothan calamari moff yavin amidala dooku boba. Darth leia solo kamino leia windu. Cade grievous fett leia. Mustafar solo ventress fett padmé moff. Vader palpatine obi-wan solo hutt qui-gon qui-gonn. Mustafar darth qui-gonn antilles qui-gonn darth moff jabba. Skywalker skywalker organa palpatine gonk lars owen."
     }, {
         "title": "Business Development Intern",
         "employer": "Things I like GmbH – MONOQI",
         "location": "Berlin",
-        "time": "Jan. 2012 – May 2012",
+        "dates": "Jan. 2012 – May 2012",
         "description": "Lucas ipsum dolor sit amet palpatine qui-gon baba windu hoth dooku skywalker kit bespin c-3po. Mustafar darth fett jade kessel. Binks maul anakin darth mothma antilles qui-gon jango wedge. Solo amidala qui-gon calrissian dooku sidious. Bothan calamari moff yavin amidala dooku boba. Darth leia solo kamino leia windu. Cade grievous fett leia. Mustafar solo ventress fett padmé moff. Vader palpatine obi-wan solo hutt qui-gon qui-gonn. Mustafar darth qui-gonn antilles qui-gonn darth moff jabba. Skywalker skywalker organa palpatine gonk lars owen."
     }]
 };
@@ -66,34 +66,34 @@ var education = {
         "name": "Hasso Plattner Institut",
         "location": "Potsdam, DE",
         "degree": "Certificate",
-        "majors": "Design Thinking – Basic Track",
+        "majors": ["Design Thinking – Basic Track"],
         "dates": "Okt. 2014 – Feb. 2015",
         "url": "https://hpi.de/en/studies/design-thinking.html"
     }, {
         "name": "ESCP Europe",
         "location": "Paris, FR",
         "degree": "Master in Management",
-        "majors": "Entrepreneurship",
+        "majors": ["Entrepreneurship", "Innovation"],
         "dates": "Sept. 2010 – Jul. 2013",
         "url": "http://www.escpeurope.eu/"
     }, {
         "name": "TU Berlin",
         "location": "Berlin, DE",
         "degree": "Erasmus Semester",
-        "majors": "Innovation Management",
+        "majors": ["Innovation Management"],
         "dates": "Mar. 2013 – Aug. 2013",
         "url": "http://www.tu-berlin.de/"
     }, {
         "name": "Avans Hogesschool",
         "location": "Breda, NL",
         "degree": "BA – Double-Degree Program",
-        "majors": "International Business Enterprises",
+        "majors": ["International Business Enterprises"],
         "dates": "Sept. 2008 – Feb. 2010",
         "url": "http://www.avans.nl/"
     }, {
         "name": "Budapest Business School",
         "location": "Budapest, HU",
-        "degree": "BSc in International Business",
+        "degree": ["BSc in International Business"],
         "majors": "International Business",
         "dates": "Sept. 2006 - Feb. 2010",
         "url": "http://en.uni-bge.hu/"
@@ -101,32 +101,32 @@ var education = {
     "onlineCourses": [{
         "title": "Front-End Web Developer Nanodegree",
         "school": "Udacity",
-        "dates": 2016,
+        "dates": "2016",
         "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001?v=fe1"
     }, {
         "title": "One Month Rails",
         "school": "One Month",
-        "dates": 2015,
+        "dates": "2015",
         "url": "https://onemonth.com/"
     }, {
         "title": "One Month HTML & CSS",
         "school": "One Month",
-        "dates": 2015,
+        "dates": "2015",
         "url": "https://onemonth.com/"
     }, {
         "title": "HTML & CSS",
         "school": "Codecademy",
-        "dates": 2015,
+        "dates": "2015",
         "url": "https://www.codecademy.com/"
     }, {
         "title": "JavaScrpit",
         "school": "Codecademy",
-        "dates": 2015,
+        "dates": "2015",
         "url": "https://www.codecademy.com/"
     }, {
         "title": "Ruby",
         "school": "Codecademy",
-        "dates": 2014,
+        "dates": "2014",
         "url": "https://www.codecademy.com/"
     }]
 };
@@ -156,58 +156,51 @@ var projects = {
     ]
 };
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.greeting);
+var data = "%data%";
+
+var formattedName = HTMLheaderName.replace(data, bio.name);
+var formattedRole = HTMLheaderRole.replace(data, bio.role);
+var formattedBioPic = HTMLbioPic.replace(data, bio.biopic);
+var formattedWelcomeMsg = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#header").append(formattedBioPic);
 $("#header").append(formattedWelcomeMsg);
 
-if (bio.skills.length > 0) {
-
-    $("#header").append(HTMLskillsStart);
-
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+$("#header").append(HTMLskillsStart);
+bio.skills.forEach(function(skill) {
+    var formattedSkill = HTMLskills.replace(data, skill);
     $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-    $("#skills").append(formattedSkill);
-}
+});
 
 var formattedContactInfo = [];
 
-formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email));
-formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
-formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
-formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
+formattedContactInfo.push(HTMLemail.replace(data, bio.contacts.email));
+formattedContactInfo.push(HTMLgithub.replace(data, bio.contacts.github));
+formattedContactInfo.push(HTMLtwitter.replace(data, bio.contacts.twitter));
+formattedContactInfo.push(HTMLlocation.replace(data, bio.contacts.location));
 
 formattedContactInfo.forEach(function(val) {
-    $("#topContacts").append(val);
-    $("#footerContacts").append(val);
+    $("#topContacts, #footerContacts").append(val);
 });
 
 work.jobs.forEach(function(company) {
     $("#workExperience").append(HTMLworkStart);
 
-    var formattedEmployer = HTMLworkEmployer.replace("%data%", company.employer);
-    var formattedTitle = HTMLworkTitle.replace("%data%", company.title);
+    var formattedEmployer = HTMLworkEmployer.replace(data, company.employer);
+    var formattedTitle = HTMLworkTitle.replace(data, company.title);
     var formattedEmployerTitle = formattedEmployer + formattedTitle;
 
     $(".work-entry:last").append(formattedEmployerTitle);
 
-    var formattedTime = HTMLworkDates.replace("%data%", company.time);
-    $(".work-entry:last").append(formattedTime);
+    var formatteddates = HTMLworkDates.replace(data, company.dates);
+    $(".work-entry:last").append(formatteddates);
 
-    var formattedPlace = HTMLworkLocation.replace("%data%", company.location);
+    var formattedPlace = HTMLworkLocation.replace(data, company.location);
     $(".work-entry:last").append(formattedPlace);
 
-    var formattedDescription = HTMLworkDescription.replace("%data%", company.description);
+    var formattedDescription = HTMLworkDescription.replace(data, company.description);
     $(".work-entry:last").append(formattedDescription);
 });
 
@@ -233,18 +226,18 @@ $(document).click(function(loc) {
 projects.projects.forEach(function(item) {
     $("#projects").append(HTMLprojectStart);
 
-    var formattedTitle = HTMLprojectTitle.replace("%data%", item.title);
+    var formattedTitle = HTMLprojectTitle.replace(data, item.title);
     $(".project-entry:last").append(formattedTitle);
 
-    var formattedDates = HTMLprojectTitle.replace("%data%", item.dates);
+    var formattedDates = HTMLprojectTitle.replace(data, item.dates);
     $(".project-entry:last").append(formattedDates);
 
-    var formattedDescription = HTMLprojectDescription.replace("%data%", item.description);
+    var formattedDescription = HTMLprojectDescription.replace(data, item.description);
     $(".project-entry:last").append(formattedDescription);
 
     if (item.images.length > 0) {
         item.images.forEach(function(image) {
-            var formattedImage = HTMLprojectImage.replace("%data%", image);
+            var formattedImage = HTMLprojectImage.replace(data, image);
             $(".project-entry:last").append(formattedImage);
         });
     }
@@ -253,19 +246,19 @@ projects.projects.forEach(function(item) {
 education.schools.forEach(function(school) {
     $("#education").append(HTMLschoolStart);
 
-    var formattedSchoolName = HTMLschoolName.replace("%data%", school.name);
+    var formattedSchoolName = HTMLschoolName.replace(data, school.name);
     $(".education-entry:last").append(formattedSchoolName);
 
-    var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
+    var formattedSchoolDegree = HTMLschoolDegree.replace(data, school.degree);
     $(".education-entry:last").append(formattedSchoolDegree);
 
-    var formattedSchoolDates = HTMLschoolDates.replace("%data%", school.dates);
+    var formattedSchoolDates = HTMLschoolDates.replace(data, school.dates);
     $(".education-entry:last").append(formattedSchoolDates);
 
-    var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", school.location);
+    var formattedSchoolLocation = HTMLschoolLocation.replace(data, school.location);
     $(".education-entry:last").append(formattedSchoolLocation);
 
-    var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", school.majors);
+    var formattedSchoolMajor = HTMLschoolMajor.replace(data, school.majors);
     $(".education-entry:last").append(formattedSchoolMajor);
 
 });
@@ -275,16 +268,16 @@ $("#education").append(HTMLonlineClasses);
 education.onlineCourses.forEach(function(online) {
     $("#education").append(HTMLonlineStart);
 
-    var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", online.title);
+    var formattedOnlineTitle = HTMLonlineTitle.replace(data, online.title);
     $(".online-entry:last").append(formattedOnlineTitle);
 
-    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", online.school);
+    var formattedOnlineSchool = HTMLonlineSchool.replace(data, online.school);
     $(".online-entry:last").append(formattedOnlineSchool);
 
-    var formattedOnlineDates = HTMLonlineDates.replace("%data%", online.dates);
+    var formattedOnlineDates = HTMLonlineDates.replace(data, online.dates);
     $(".online-entry:last").append(formattedOnlineDates);
 
-    // var formattedOnlineURL = HTMLonlineURL.replace("%data%", online.url);
+    // var formattedOnlineURL = HTMLonlineURL.replace(data, online.url);
     // $(".online-entry:last").append(formattedOnlineURL);
 });
 
