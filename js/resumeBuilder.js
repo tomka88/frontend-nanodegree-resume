@@ -93,8 +93,8 @@ var education = {
     }, {
         "name": "Budapest Business School",
         "location": "Budapest, HU",
-        "degree": ["BSc in International Business"],
-        "majors": "International Business",
+        "degree": "BSc in International Business",
+        "majors": ["International Business"],
         "dates": "Sept. 2006 - Feb. 2010",
         "url": "http://en.uni-bge.hu/"
     }],
@@ -169,47 +169,60 @@ $("#header").append(formattedBioPic);
 $("#header").append(formattedWelcomeMsg);
 
 $("#header").append(HTMLskillsStart);
-bio.skills.forEach(function(skill) {
-    var formattedSkill = HTMLskills.replace(data, skill);
-    $("#skills").append(formattedSkill);
-});
 
-var formattedContactInfo = [];
+bio.display = function() {
+    bio.skills.forEach(function(skill) {
+        var formattedSkill = HTMLskills.replace(data, skill);
+        $("#skills").append(formattedSkill);
+    });
+};
 
-formattedContactInfo.push(HTMLemail.replace(data, bio.contacts.email));
-formattedContactInfo.push(HTMLgithub.replace(data, bio.contacts.github));
-formattedContactInfo.push(HTMLtwitter.replace(data, bio.contacts.twitter));
-formattedContactInfo.push(HTMLlocation.replace(data, bio.contacts.location));
+bio.display();
 
-formattedContactInfo.forEach(function(val) {
-    $("#topContacts, #footerContacts").append(val);
-});
+bio.contacts.display = function() {
+    var formattedContactInfo = [];
 
-work.jobs.forEach(function(company) {
-    $("#workExperience").append(HTMLworkStart);
+    formattedContactInfo.push(HTMLemail.replace(data, bio.contacts.email));
+    formattedContactInfo.push(HTMLgithub.replace(data, bio.contacts.github));
+    formattedContactInfo.push(HTMLtwitter.replace(data, bio.contacts.twitter));
+    formattedContactInfo.push(HTMLlocation.replace(data, bio.contacts.location));
 
-    var formattedEmployer = HTMLworkEmployer.replace(data, company.employer);
-    var formattedTitle = HTMLworkTitle.replace(data, company.title);
-    var formattedEmployerTitle = formattedEmployer + formattedTitle;
+    formattedContactInfo.forEach(function(val) {
+        $("#topContacts, #footerContacts").append(val);
+    });
+};
 
-    $(".work-entry:last").append(formattedEmployerTitle);
+bio.contacts.display();
 
-    var formatteddates = HTMLworkDates.replace(data, company.dates);
-    $(".work-entry:last").append(formatteddates);
+work.display = function(){
+    work.jobs.forEach(function(company) {
+        $("#workExperience").append(HTMLworkStart);
 
-    var formattedPlace = HTMLworkLocation.replace(data, company.location);
-    $(".work-entry:last").append(formattedPlace);
+        var formattedEmployer = HTMLworkEmployer.replace(data, company.employer);
+        var formattedTitle = HTMLworkTitle.replace(data, company.title);
+        var formattedEmployerTitle = formattedEmployer + formattedTitle;
 
-    var formattedDescription = HTMLworkDescription.replace(data, company.description);
-    $(".work-entry:last").append(formattedDescription);
-});
+        $(".work-entry:last").append(formattedEmployerTitle);
 
-$(document).click(function(loc) {
-    var x = loc.pageX;
-    var y = loc.pageY;
+        var formatteddates = HTMLworkDates.replace(data, company.dates);
+        $(".work-entry:last").append(formatteddates);
 
-    logClicks(x, y);
-});
+        var formattedPlace = HTMLworkLocation.replace(data, company.location);
+        $(".work-entry:last").append(formattedPlace);
+
+        var formattedDescription = HTMLworkDescription.replace(data, company.description);
+        $(".work-entry:last").append(formattedDescription);
+    });
+};
+
+work.display();
+
+// $(document).click(function(loc) {
+//     var x = loc.pageX;
+//     var y = loc.pageY;
+
+//     logClicks(x, y);
+// });
 
 // function inName(name) {
 // 	name = name.trim().split(" ");
@@ -223,62 +236,71 @@ $(document).click(function(loc) {
 
 // $("#main").append(internationalizeButton);
 
-projects.projects.forEach(function(item) {
-    $("#projects").append(HTMLprojectStart);
 
-    var formattedTitle = HTMLprojectTitle.replace(data, item.title);
-    $(".project-entry:last").append(formattedTitle);
+projects.display = function() {
+    projects.projects.forEach(function(item) {
+        $("#projects").append(HTMLprojectStart);
 
-    var formattedDates = HTMLprojectTitle.replace(data, item.dates);
-    $(".project-entry:last").append(formattedDates);
+        var formattedTitle = HTMLprojectTitle.replace(data, item.title);
+        $(".project-entry:last").append(formattedTitle);
 
-    var formattedDescription = HTMLprojectDescription.replace(data, item.description);
-    $(".project-entry:last").append(formattedDescription);
+        var formattedDates = HTMLprojectTitle.replace(data, item.dates);
+        $(".project-entry:last").append(formattedDates);
 
-    if (item.images.length > 0) {
-        item.images.forEach(function(image) {
-            var formattedImage = HTMLprojectImage.replace(data, image);
-            $(".project-entry:last").append(formattedImage);
-        });
-    }
-});
+        var formattedDescription = HTMLprojectDescription.replace(data, item.description);
+        $(".project-entry:last").append(formattedDescription);
 
-education.schools.forEach(function(school) {
-    $("#education").append(HTMLschoolStart);
+        if (item.images.length > 0) {
+            item.images.forEach(function(image) {
+                var formattedImage = HTMLprojectImage.replace(data, image);
+                $(".project-entry:last").append(formattedImage);
+            });
+        }
+    });
+};
 
-    var formattedSchoolName = HTMLschoolName.replace(data, school.name);
-    $(".education-entry:last").append(formattedSchoolName);
+projects.display();
 
-    var formattedSchoolDegree = HTMLschoolDegree.replace(data, school.degree);
-    $(".education-entry:last").append(formattedSchoolDegree);
+education.display = function() {
+    education.schools.forEach(function(school) {
+        $("#education").append(HTMLschoolStart);
 
-    var formattedSchoolDates = HTMLschoolDates.replace(data, school.dates);
-    $(".education-entry:last").append(formattedSchoolDates);
+        var formattedSchoolName = HTMLschoolName.replace(data, school.name);
+        $(".education-entry:last").append(formattedSchoolName);
 
-    var formattedSchoolLocation = HTMLschoolLocation.replace(data, school.location);
-    $(".education-entry:last").append(formattedSchoolLocation);
+        var formattedSchoolDegree = HTMLschoolDegree.replace(data, school.degree);
+        $(".education-entry:last").append(formattedSchoolDegree);
 
-    var formattedSchoolMajor = HTMLschoolMajor.replace(data, school.majors);
-    $(".education-entry:last").append(formattedSchoolMajor);
+        var formattedSchoolDates = HTMLschoolDates.replace(data, school.dates);
+        $(".education-entry:last").append(formattedSchoolDates);
 
-});
+        var formattedSchoolLocation = HTMLschoolLocation.replace(data, school.location);
+        $(".education-entry:last").append(formattedSchoolLocation);
 
-$("#education").append(HTMLonlineClasses);
+        var formattedSchoolMajor = HTMLschoolMajor.replace(data, school.majors);
+        $(".education-entry:last").append(formattedSchoolMajor);
 
-education.onlineCourses.forEach(function(online) {
-    $("#education").append(HTMLonlineStart);
+    });
 
-    var formattedOnlineTitle = HTMLonlineTitle.replace(data, online.title);
-    $(".online-entry:last").append(formattedOnlineTitle);
+    $("#education").append(HTMLonlineClasses);
 
-    var formattedOnlineSchool = HTMLonlineSchool.replace(data, online.school);
-    $(".online-entry:last").append(formattedOnlineSchool);
+    education.onlineCourses.forEach(function(online) {
+        $("#education").append(HTMLonlineStart);
 
-    var formattedOnlineDates = HTMLonlineDates.replace(data, online.dates);
-    $(".online-entry:last").append(formattedOnlineDates);
+        var formattedOnlineTitle = HTMLonlineTitle.replace(data, online.title);
+        $(".online-entry:last").append(formattedOnlineTitle);
 
-    // var formattedOnlineURL = HTMLonlineURL.replace(data, online.url);
-    // $(".online-entry:last").append(formattedOnlineURL);
-});
+        var formattedOnlineSchool = HTMLonlineSchool.replace(data, online.school);
+        $(".online-entry:last").append(formattedOnlineSchool);
+
+        var formattedOnlineDates = HTMLonlineDates.replace(data, online.dates);
+        $(".online-entry:last").append(formattedOnlineDates);
+
+        // var formattedOnlineURL = HTMLonlineURL.replace(data, online.url);
+        // $(".online-entry:last").append(formattedOnlineURL);
+    });
+};
+
+education.display();
 
 $("#mapDiv").append(googleMap);
