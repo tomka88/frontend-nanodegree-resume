@@ -158,28 +158,25 @@ var projects = {
 
 var data = "%data%";
 
-var formattedName = HTMLheaderName.replace(data, bio.name);
-var formattedRole = HTMLheaderRole.replace(data, bio.role);
-var formattedBioPic = HTMLbioPic.replace(data, bio.biopic);
-var formattedWelcomeMsg = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#header").append(formattedBioPic);
-$("#header").append(formattedWelcomeMsg);
-
-$("#header").append(HTMLskillsStart);
 
 bio.display = function() {
+    var formattedName = HTMLheaderName.replace(data, bio.name);
+    var formattedRole = HTMLheaderRole.replace(data, bio.role);
+    var formattedBioPic = HTMLbioPic.replace(data, bio.biopic);
+    var formattedWelcomeMsg = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
+
+    $("#header").prepend(formattedRole);
+    $("#header").prepend(formattedName);
+    $("#header").append(formattedBioPic);
+    $("#header").append(formattedWelcomeMsg);
+
+    $("#header").append(HTMLskillsStart);
+
     bio.skills.forEach(function(skill) {
         var formattedSkill = HTMLskills.replace(data, skill);
         $("#skills").append(formattedSkill);
     });
-};
 
-bio.display();
-
-bio.contacts.display = function() {
     var formattedContactInfo = [];
 
     formattedContactInfo.push(HTMLemail.replace(data, bio.contacts.email));
@@ -192,7 +189,7 @@ bio.contacts.display = function() {
     });
 };
 
-bio.contacts.display();
+bio.display();
 
 work.display = function(){
     work.jobs.forEach(function(company) {
